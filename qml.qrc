@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>main.qml</file>
+        <file>Components/MyCell.qml</file>
+        <file>Components/MyModel.qml</file>
+        <file>Components/qmldir</file>
+    </qresource>
+    <qresource prefix="/images"/>
+</RCC>

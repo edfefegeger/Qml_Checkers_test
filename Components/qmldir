@@ -1,0 +1,3 @@
+module Components
+MyCell 1.0 MyCell.qml
+singleton MyModel 1.0 MyModel.qml
