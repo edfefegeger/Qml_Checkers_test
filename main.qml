@@ -39,15 +39,39 @@ ApplicationWindow
         {
             id: _delegate
             property string displayText: display
+            property var rectangles: []
 
             width: _table.cellWidth
             height: _table.cellHeight
+            function getRectByIndex(index) {
+                return _table.rectangles[index];
+            }
             anchors.margins: 2
             Rectangle {
                 id: own
+                    MouseArea {
+                        anchors.fill: own
+                        onClicked: {
+                            var otherRightText = own.model.getRectByIndex(_delegate.displayText - 7);
+                            var otherLeftText = own.model.getRectByIndex(_delegate.displayText - 9);
+                            if (ckecker.visible === true)
+                            {
+                                if ((otherLeftText.ckecker.visible === false) & (otherRightText.ckecker.visible === false))
+                                otherLeftText.own.color = "yellow"
+                                otherRightText.own.color = "yellow"
+                            }
+                        }
+                    }
+
                 color: (_delegate.displayText % 2 === 0 && Math.floor(_delegate.displayText / 8) % 2 === 0) || (_delegate.displayText % 2 === 1 && Math.floor(_delegate.displayText / 8) % 2 === 1) ? "white" : "black"
 
+
+
+
                 Component.onCompleted: {
+                   own.rectangles.push(own);
+
+
                     if ((_delegate.displayText % 2 === 0 && Math.floor(_delegate.displayText / 8) % 2 === 0) & (_delegate.displayText <= 23) || (_delegate.displayText % 2 === 1 && Math.floor(_delegate.displayText / 8) % 2 === 1) & (_delegate.displayText <= 23)) {
 
                         ckecker.visible = false;
@@ -55,7 +79,14 @@ ApplicationWindow
                     if (_delegate.displayText >= 24 && _delegate.displayText <= 39) {
                         ckecker.visible = false;
                     }
+                    if (_delegate.displayText <= 23)
+                    {
+                        ckecker.color = "gray"
+                    }
                 }
+
+
+
 
                 Rectangle {
                     id: ckecker
@@ -65,7 +96,9 @@ ApplicationWindow
                     color: "white"
                     anchors.centerIn: own
                     visible: true // начальное состояние
+
                 }
+
 
                 anchors.centerIn: parent
                 Text {
@@ -84,9 +117,5 @@ ApplicationWindow
         }
 
     }
-
-//    PathView
-//    TableView
-//    StackView
 
 }

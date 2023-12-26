@@ -31,6 +31,8 @@ public:
 
     int width() const;
     int height() const;
+    int otherRightText = 0;
+    int otherLeftText = 0;
 
 private:
 

@@ -47,4 +47,12 @@ ListModel {
         text: "3,3"
         color: "green"
     }
+    function getOtherCellValue(currentValue) {
+        var index = parseInt(currentValue);
+        if (index >= 0 && index < count) {
+            return get(index).text;
+        } else {
+            return "";
+        }
+    }
 }
