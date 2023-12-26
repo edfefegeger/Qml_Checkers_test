@@ -24,7 +24,7 @@ ApplicationWindow
         {
             fill: parent
             centerIn: parent
-            margins: 80
+            margins: 80 + (root.width + root.height) / 30
         }
 
 //        flickableDirection: Flickable.AutoFlickIfNeeded
