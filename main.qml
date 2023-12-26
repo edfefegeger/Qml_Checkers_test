@@ -39,13 +39,9 @@ ApplicationWindow
         {
             id: _delegate
             property string displayText: display
-            property var rectangles: []
 
             width: _table.cellWidth
             height: _table.cellHeight
-            function getRectByIndex(index) {
-                return _table.rectangles[index];
-            }
             anchors.margins: 2
             Rectangle {
                 id: own
@@ -65,7 +61,7 @@ ApplicationWindow
 
                 color: (_delegate.displayText % 2 === 0 && Math.floor(_delegate.displayText / 8) % 2 === 0) || (_delegate.displayText % 2 === 1 && Math.floor(_delegate.displayText / 8) % 2 === 1) ? "white" : "black"
 
-
+                property var rectangles: []
 
 
                 Component.onCompleted: {
@@ -86,7 +82,9 @@ ApplicationWindow
                 }
 
 
-
+                function getRectByIndex(index) {
+                    return _table.rectangles[index];
+                }
 
                 Rectangle {
                     id: ckecker
