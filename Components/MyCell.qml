@@ -33,6 +33,14 @@ Item
             }
             anchors.centerIn: backgroundRect
         }
+        function getOtherCellValue(currentValue) {
+            var index = parseInt(currentValue);
+            if (index >= 0 && index < count) {
+                return get(index).text;
+            } else {
+                return "";
+            }
+        }
     }
 
 //    Component.onCompleted: console.log(frontText.font.pointSize)

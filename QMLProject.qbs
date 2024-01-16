@@ -18,6 +18,7 @@ CppApplication {
         "Models/mymodel.cpp",
         "Models/mymodel.h",
         "main.cpp",
+        "pawn-chess-piece-outline-svgrepo-com.svg",
         "qml.qrc",
         "main.qml",
     ]

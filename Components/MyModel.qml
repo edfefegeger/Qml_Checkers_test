@@ -2,6 +2,7 @@ import QtQuick 2.12
 pragma Singleton
 
 ListModel {
+    id: myListModel
     ListElement
     {
         text: "1,1"
@@ -55,4 +56,6 @@ ListModel {
             return "";
         }
     }
+
+
 }

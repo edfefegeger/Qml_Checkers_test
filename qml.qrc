@@ -6,4 +6,19 @@
         <file>Components/qmldir</file>
     </qresource>
     <qresource prefix="/images"/>
+    <qresource prefix="/">
+        <file>MyModelWrapper/MyModelWrapper.qml</file>
+        <file>pawn-chess-piece-outline-svgrepo-com.svg</file>
+        <file>pawn-chess-piece-svgrepo-com.svg</file>
+        <file>chess-svgrepo-com (1).svg</file>
+        <file>chess-svgrepo-com (2).svg</file>
+        <file>chess-3-svgrepo-com.svg</file>
+        <file>chess-4-svgrepo-com.svg</file>
+        <file>chess-9-svgrepo-com.svg</file>
+        <file>chess-illustration-10-svgrepo-com.svg</file>
+        <file>chess-king-svgrepo-com.svg</file>
+        <file>chess-king-svgrepo-com (1).svg</file>
+        <file>queen-crown-svgrepo-com.svg</file>
+        <file>royal-crown-of-a-king-svgrepo-com.svg</file>
+    </qresource>
 </RCC>

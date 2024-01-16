@@ -1,7 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include "Models/mymodel.h"
-
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -10,6 +9,8 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     qmlRegisterType<MyModel>("CPP", 1, 0, "MyModel");
+
+    qmlRegisterType<MyModel>("MyTypes", 1, 0, "MyModel");
 
     QQmlApplicationEngine engine;
 
